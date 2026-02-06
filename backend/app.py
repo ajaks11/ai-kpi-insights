@@ -1,3 +1,5 @@
+import logging
+logging.basicConfig(level=logging.INFO)
 from advanced_sql import get_user_activity
 from data_sources import fetch_users, fetch_posts
 from ai_insights import generate_ai_insight
@@ -8,7 +10,7 @@ from sql_kpis import get_kpis_from_sql
 def main():
     print("APP STARTED")
 
-    print("Initializing database...")
+    logging.info("Initializing database")
     init_db()
 
     print("Fetching data...")
